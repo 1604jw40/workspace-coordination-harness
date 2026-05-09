@@ -226,6 +226,23 @@ Keep this AGENTS.md compact.
 
 Large research notes, architecture decisions, and design explanations belong in docs/, not in this file.
 
+## Language Policy
+
+사람이 읽는 모든 프로젝트 문서, 작업 보고서, PR 설명, 리뷰 요청, 구현 요약은 한국어로 작성해야 합니다.
+
+여기에는 다음이 포함됩니다.
+- docs 파일
+- README 파일
+- PR 설명
+- 최종 보고
+- 작업 중간 리뷰 요청
+- 아키텍처 노트
+- 제품 노트
+
+코드 식별자, 파일명, 패키지명, 테스트명, 커밋 메시지, inline technical term은 영어로 유지해도 됩니다.
+
+도구 출력, CLI log, package manager log, system approval prompt는 영어로 유지해도 됩니다.
+
 ## Git Security Rules
 
 Do not work directly on main.

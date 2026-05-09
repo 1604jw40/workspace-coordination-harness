@@ -1,5 +1,5 @@
-# MVP Scope
+# MVP 범위
 
-The MVP includes workspace domain types, fixture parsing, deterministic normalization, rule-based extraction, reducers, coordination brief generation, and fixture-based tests.
+MVP 범위에는 workspace domain type, fixture parsing, deterministic normalization, rule-based extraction, reducer, coordination brief generation, fixture 기반 test가 포함됩니다.
 
-The MVP excludes live Slack, Notion, and GitHub integrations, OAuth, production databases, external API calls, autonomous write-back, LLMs, RAG, embeddings, vector databases, Ollama, and MCP runtime.
+MVP 범위에서 live Slack, Notion, GitHub integration, OAuth, production database, external API call, autonomous write-back, LLM, RAG, embedding, vector database, Ollama, MCP runtime은 제외합니다.

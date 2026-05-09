@@ -1,7 +1,7 @@
-# Harness Engineering Foundation
+# Harness 엔지니어링 기반
 
-The MVP is a deterministic TypeScript harness that turns synthetic workspace-like fixtures into structured coordination briefs.
+MVP는 합성 workspace 형태의 fixture를 구조화된 coordination brief로 변환하는 결정적 TypeScript harness입니다.
 
-The core package must avoid external APIs, live integrations, credentials, LLMs, RAG, embeddings, vector databases, MCP runtime, and local model dependencies.
+core package는 external API, live integration, credential, LLM, RAG, embedding, vector database, MCP runtime, local model dependency를 사용하지 않아야 합니다.
 
-Tests use synthetic fixtures and deterministic assertions only.
+테스트는 합성 fixture와 결정적 assertion만 사용합니다.
