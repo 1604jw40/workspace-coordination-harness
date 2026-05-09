@@ -279,3 +279,52 @@ GitHub Actions must use least privilege permissions.
 Default workflow permissions should be read-only.
 
 Any workflow requiring write permission must justify it in comments and scope it to the smallest possible job.
+
+At the end of every task, Codex must write the final report in Korean using this format:
+
+작업 요약:
+- ...
+
+변경된 파일:
+- ...
+
+검증:
+- npm run typecheck: 통과/실패
+- npm run lint: 통과/실패
+- npm test: 통과/실패
+
+보안 확인:
+- secret 또는 credential 추가 없음
+- 외부 API 호출 추가 없음
+- main 직접 수정 없음
+- GitHub Actions 권한 최소화 확인
+
+다음 권장 작업:
+- ...
+
+## Mid-task Review Checkpoints
+
+Codex must pause and ask for review before continuing when any of the following occurs:
+
+- The requested scope appears larger than the current branch goal.
+- A new dependency is needed.
+- A new package, framework, or runtime is being introduced.
+- A test requires changing the domain model.
+- A security-related file is changed.
+- GitHub Actions permissions need write access.
+- The implementation would require external API access.
+- The implementation would introduce LLM, RAG, Ollama, embeddings, vector DB, MCP runtime, or live integrations.
+- The implementation changes AGENTS.md, .gitignore, CODEOWNERS, or CI configuration.
+- The implementation changes public interfaces used by multiple packages.
+- The implementation requires deleting or renaming files.
+- Tests fail for reasons unrelated to the current task.
+
+When asking for review, Codex must summarize:
+
+- 현재까지 한 작업
+- 막힌 지점 또는 결정이 필요한 부분
+- 가능한 선택지
+- 각 선택지의 장단점
+- Codex의 추천안
+
+The review request must be written in Korean.
