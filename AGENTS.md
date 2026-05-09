@@ -225,3 +225,57 @@ Run typecheck, lint, and tests before finishing.
 Keep this AGENTS.md compact.
 
 Large research notes, architecture decisions, and design explanations belong in docs/, not in this file.
+
+## Git Security Rules
+
+Do not work directly on main.
+
+All changes must be made on short-lived branches and merged through pull requests.
+
+Branch prefixes:
+- docs/
+- chore/
+- test/
+- feat/
+- refactor/
+- security/
+
+Never commit:
+- .env files
+- API keys
+- access tokens
+- refresh tokens
+- private keys
+- certificates
+- production credentials
+- real Slack exports
+- real Notion exports
+- real GitHub private data
+- customer data
+- employee private data
+
+Use synthetic fixtures only.
+
+If a secret is accidentally committed:
+1. Stop work immediately.
+2. Assume the secret is compromised.
+3. Rotate or revoke the secret outside the repository.
+4. Remove the secret from the codebase.
+5. Add a regression rule or .gitignore entry.
+6. Document the incident in a private security note.
+
+Codex must not:
+- bypass branch protection
+- push directly to main
+- add external API credentials
+- add secrets to tests
+- add live integration tokens
+- disable security checks
+- weaken GitHub Actions permissions
+- add write permissions unless explicitly requested
+
+GitHub Actions must use least privilege permissions.
+
+Default workflow permissions should be read-only.
+
+Any workflow requiring write permission must justify it in comments and scope it to the smallest possible job.
