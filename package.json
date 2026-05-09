@@ -1,0 +1,25 @@
+{
+  "name": "workspace-coordination-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -b",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@types/node": "^22.15.17",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "eslint": "^9.26.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
+  }
+}
